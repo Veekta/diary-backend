@@ -14,8 +14,8 @@ app.get("/", (req, res) => {
   res.status(200).send("Server Up!...");
 });
 
-app.use("/api/diary", userRoute);
-app.use("/api/userdiary", diaryRoute);
+// app.use("/api/diary", userRoute);
+// app.use("/api/userdiary", diaryRoute);
 
 app.listen(PORT, () => {
   console.log(`Listening to PORT: ${PORT}`);
