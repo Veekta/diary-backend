@@ -7,14 +7,15 @@ const app = express();
 const userRoute = require("./router/userRouter");
 const diaryRoute = require("./router/diaryRouter");
 
-app.use(cors({ origin: "*" }));
+app.use(cors());
 app.use(express.json());
-app.use("/api/diary", userRoute);
-app.use("/api/userdiary", diaryRoute);
 
 app.get("/", (req, res) => {
   res.status(200).send("Server Up!...");
 });
+
+app.use("/api/diary", userRoute);
+app.use("/api/userdiary", diaryRoute);
 
 app.listen(PORT, () => {
   console.log(`Listening to PORT: ${PORT}`);
