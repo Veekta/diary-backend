@@ -13,8 +13,8 @@ const {
 
 router.route("/diary/:id").post(image, createDiary);
 router.route("/diary/:id").get(getDiary);
-router.route("/search").get(searchDiary);
-router.route("/page").get(paginate);
+// router.route("/search").get(searchDiary);
+// router.route("/page").get(paginate);
 router
   .route("/diary/:id/:diary")
   .get(getSingleDiary)
