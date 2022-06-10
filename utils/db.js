@@ -1,7 +1,7 @@
+require("dotenv").config();
 const mongoose = require("mongoose");
-const url = "mongodb://localhost/DiaryData";
 mongoose
-  .connect(url)
+  .connect(process.env.URL)
   .then(() => {
     console.log("connected");
   })
