@@ -1,1 +1,1 @@
-web: diaryapp.js
+web: node diaryapp.js
